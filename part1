@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Sanjay ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+<!-- Loading Screen -->
+
+<div id="loading">
+<h1>Preparing Your Surprise...</h1>
+<div class="loader"></div>
+</div>
+
+<!-- Login -->
+
+<section id="login">
+
+<div class="glass">
+
+<h2>🎁 Secret Birthday Surprise</h2>
+
+<p>Enter the Secret PIN</p>
+
+<input type="password" id="pin" maxlength="4">
+
+<button onclick="checkPin()">Unlock</button>
+
+<p id="error"></p>
+
+</div>
+
+</section>
+
+<!-- Welcome -->
+
+<section id="welcome" class="hidden">
+
+<h1>Happy Birthday</h1>
+
+<h2>Sanjay ❤️</h2>
+
+<p>Today is all about YOU.</p>
+
+<button onclick="nextSection('countdown')">
+
+Start Surprise
+
+</button>
+
+</section>
+
+<!-- Countdown -->
+
+<section id="countdown" class="hidden">
+
+<h1 id="count">3</h1>
+
+</section>
+
+<!-- Cake -->
+
+<section id="cake" class="hidden">
+
+<h1>🎂</h1>
+
+<h2>Make a Wish...</h2>
+
+<p>Blow into your microphone 🎤</p>
+
+<button onclick="blowCandles()">
+
+Blow Candles
+
+</button>
+
+</section>
+
+<!-- Celebration -->
+
+<section id="celebration" class="hidden">
+
+<h1>🎉 Happy Birthday Sanjay 🎉</h1>
+
+<p>You deserve endless happiness!</p>
+
+<button onclick="nextSection('letter')">
+
+Continue
+
+</button>
+
+</section>
+
+<!-- Letter -->
+
+<section id="letter" class="hidden">
+
+<div class="letter-box">
+
+<h1>💌</h1>
+
+<p id="typing">
+
+</p>
+
+<button onclick="nextSection('video')">
+
+Next
+
+</button>
+
+</div>
+
+</section>
+
+<!-- Birthday Video -->
+
+<section id="video" class="hidden">
+
+<h1>🎥 Birthday Movie</h1>
+
+<div class="video-box">
+
+<p>
+
+An animated birthday celebration will appear here in the final version.
+
+</p>
+
+</div>
+
+<button onclick="nextSection('final')">
+
+Final Surprise
+
+</button>
+
+</section>
+
+<!-- Final -->
+
+<section id="final" class="hidden">
+
+<h1>
+
+🎆 HAPPY BIRTHDAY SANJAY 🎆
+
+</h1>
+
+<p>
+
+May your dreams come true,
+
+your smile never fade,
+
+and your future be brighter than the stars.
+
+</p>
+
+<h2>
+
+❤️ Have an Amazing Birthday ❤️
+
+</h2>
+
+<button onclick="restart()">
+
+Replay
+
+</button>
+
+</section>
+
+<audio id="music" loop>
+
+<source src="assets/music.mp3" type="audio/mpeg">
+
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
